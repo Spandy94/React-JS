@@ -1,0 +1,46 @@
+body{
+    margin-top: 20px;
+    background-color: lightblue;
+}
+
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar{
+    background-color: palevioletred;
+    overflow: hidden;
+}
+
+.topbar a{
+    float: right;
+    color: bisque;
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.sidebar{
+    background-color: darkred;
+    color: white;
+    height: 100%;
+}
+
+.sidebar a{
+    margin-left: 10px;
+    display: block;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    font-size: 32px;
+    text-decoration: none;
+}
+.card{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.content{
+    background-color: lightblue;
+}
