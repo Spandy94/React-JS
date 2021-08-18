@@ -1,6 +1,6 @@
 body{
-    margin-top: 20px;
-    background-color: lightblue;
+    margin-top: 22px;
+    background-color: whitesmoke;
 }
 
 .main{
@@ -9,21 +9,22 @@ body{
 }
 
 .topbar{
-    background-color: palevioletred;
+    background-color:darkred;
     overflow: hidden;
 }
 
 .topbar a{
     float: right;
-    color: bisque;
+    color: whitesmoke;
     text-align: center;
-    padding: 20px 26px;
+    padding: 20px 20px;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .sidebar{
-    background-color: darkred;
+    background-color: lightcoral;
+    text-align: left;
     color: white;
     height: 100%;
 }
@@ -33,14 +34,19 @@ body{
     display: block;
     color: whitesmoke;
     padding-bottom: 10px;
-    font-size: 32px;
+    font-size: 24px;
     text-decoration: none;
 }
 .card{
     position: relative;
     display:flex;
+    font-size: 26px;
     flex-direction: column;
 }
 .content{
-    background-color: lightblue;
+    background-color: lavender;
 }
+
+/* .img {
+    border-radius: 50%;
+  } */
