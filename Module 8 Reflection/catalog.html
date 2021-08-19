@@ -1,140 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- StyleSheet -->
-  <link rel="stylesheet" href="catalog.css" />
-  <title>Product Catalog Project</title>
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav__center container">
-      <div class="nav__logo">
-        <h1>SHOPI<span>Q</span></h1>
-      </div>
-
-      <ul class="nav__list">
-        <a href="#" class="login">Login</a>
-        <div class="cart__icon">
-          <h2>cart</h2>
-          <span class="item__total">0</span>
-        </div>
-      </ul>
-
-      <div class="hamburger">
-        <svg>
-          <use xlink:href="./images/sprite.svg#icon-menu"></use>
-        </svg>
-      </div>
+<main class="container">
+ 
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <img data-image="black" src="D:\2nd YEAR\ReactJS\React-JS\Module 8 Reflection\images\black.png" alt="">
+      <img data-image="blue" src="D:\2nd YEAR\ReactJS\React-JS\Module 8 Reflection\images\blue.png" alt="">
+      <img data-image="red" class="active" src="D:\2nd YEAR\ReactJS\React-JS\Module 8 Reflection\images\red.png" alt="">
     </div>
-  </nav>
-  <!-- Navigation -->
-
-  <!-- Products -->
-  <section class="products">
-    <div class="product__center">
-      <!-- Single Product -->
-      <!-- <div class="product">
-        <div class="image__container">
-          <img src="./images/product-1.jpg" alt="" />
-        </div>
-        <div class="product__footer">
-          <h1>The Original Super Donut</h1>
-          <div class="rating">
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-              </svg>
-            </span>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-              </svg>
-            </span>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-              </svg>
-            </span>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-              </svg>
-            </span>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-              </svg>
-            </span>
-          </div>
-          <div class="bottom">
-            <div class="btn__group">
-              <a href="#" class="btn addToCart">Add to Cart</a>
-              <a href="#" class="btn view">View</a>
+   
+   
+    <!-- Right Column -->
+    <div class="right-column">
+   
+      <!-- Product Description -->
+      <div class="product-description">
+        <span>Headphones</span>
+        <h1>Beats EP</h1>
+        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+      </div>
+   
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+   
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+   
+          <div class="color-choose">
+            <div>
+              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+              <label for="red"><span></span></label>
             </div>
-            <div class="price">$255.99</div>
+            <div>
+              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+              <label for="blue"><span></span></label>
+            </div>
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
           </div>
+   
         </div>
-      </div> -->
-      <!-- End of Single Product -->
-    </div>
-  </section>
-
-  <section class="cart__overlay">
-    <div class="cart">
-      <span class="close__cart">
-        <svg>
-          <use xlink:href="./images/sprite.svg#icon-cross"></use>
-        </svg>
-      </span>
-      <h1>Your Cart</h1>
-      <div class="cart__centent">
-        <!-- Cart Item -->
-        <!-- <div class="cart__item">
-          <img src="./images/product-1.jpg" alt="">
-          <div>
-            <h3>The Original Super Donut</h3>
-            <h3 class="price">$750</h3>
+   
+        <!-- Cable Configuration -->
+        <div class="cable-config">
+          <span>Cable configuration</span>
+   
+          <div class="cable-choose">
+            <button>Straight</button>
+            <button>Coiled</button>
+            <button>Long-coiled</button>
           </div>
-          <div>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-angle-up"></use>
-              </svg>
-            </span>
-            <p>3</p>
-            <span>
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
-              </svg>
-            </span>
-          </div>
-          <div>
-            <span class="remove__item">
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-trash"></use>
-              </svg>
-            </span>
-          </div>
-        </div> -->
+   
+          <a href="#">How to configurate your headphones</a>
+        </div>
       </div>
-
-      <div class="cart__footer">
-        <h3>Total: $ <span class="cart__total">0</span></h3>
-        <button class="clear__cart btn">Clear Cart</button>
+   
+      <!-- Product Pricing -->
+      <div class="product-price">
+        <span>Rs 5999</span>
+        <a href="#" class="cart-btn">Add to cart</a>
       </div>
     </div>
-  </section>
-
-  <script src="app.js"></script>
-</body>
-
-</html>
+  </main>
