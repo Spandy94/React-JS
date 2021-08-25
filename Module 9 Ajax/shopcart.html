@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <h1>Shopping Cart</h1>
+
+        <div>
+            <ul>
+                <li><a class="add-to-cart" href="#" data-name="Apple" data-price="122">Apple Rs 122</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Banana" data-price="133">Banana Rs 133</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Shoe" data-price="1999">Shoe Rs 1999</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Frisbee" data-price="150">Frisbee Rs 150</a></li>
+            </ul>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+
+
+        <div>
+            <ul id="show-cart">
+                <li>???????</li>
+            </ul>
+            <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <div>Total Cart:$<span id="total-cart"></span></div>
+        </div>
+
+
+
+        <script src="D:/2nd YEAR/ReactJS/React-JS/Module 9 Ajax/shopcart.js"></script>
+
+        <script>
+
+            $(".add-to-cart").click(function(event){
+                event.preventDefault();
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+
+                shoppingCart.addItemToCart(name, price, 1);
+                displayCart();
+            });
+
+            $("#clear-cart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });
+
+            function displayCart() {
+                var cartArray = shoppingCart.listCart();
+                console.log(cartArray);
+                var output = "";
+
+                for (var i in cartArray) {
+                    output += "<li>"
+                        +cartArray[i].name
+                        +" <input class='item-count' type='number' data-name='"
+                        +cartArray[i].name
+                        +"' value='"+cartArray[i].count+"' >"
+                        +" x "+cartArray[i].price
+                        +" = "+cartArray[i].total
+                        +" <button class='plus-item' data-name='"
+                        +cartArray[i].name+"'>+</button>"
+                        +" <button class='subtract-item' data-name='"
+                        +cartArray[i].name+"'>-</button>"
+                        +" <button class='delete-item' data-name='"
+                        +cartArray[i].name+"'>X</button>"
+                        +"</li>";
+                }
+
+                $("#show-cart").html(output);
+                $("#count-cart").html( shoppingCart.countCart() );
+                $("#total-cart").html( shoppingCart.totalCart() );
+            }
+
+            $("#show-cart").on("click", ".delete-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemFromCartAll(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".subtract-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemFromCart(name);
+                displayCart();
+            });
+
+            $("#show-cart").on("click", ".plus-item", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.addItemToCart(name, 0, 1);
+                displayCart();
+            });
+
+            $("#show-cart").on("change", ".item-count", function(event){
+                var name = $(this).attr("data-name");
+                var count = Number($(this).val());
+                shoppingCart.setCountForItem(name, count);
+                displayCart();
+            });
+
+
+            displayCart();
+
+        </script>
+    </body>
+</html>
+
