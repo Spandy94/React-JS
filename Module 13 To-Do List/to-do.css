@@ -1,0 +1,38 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    padding: 10px;
+    border: 1px solid;
+    width: 40%;
+    margin: auto;
+}
+.container.input{
+    width: 87%;
+    height: 20px;
+}
+.container.btn{
+    width: 50px;
+    height: 25px;
+}
+.container ul{
+    list-style: none;
+    padding: 2px;
+}
+.container li{
+    color: red;
+}
+.container li a{
+    float: right;
+    color: lightcyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container #error{
+    color: red;
+    font-size: 14px;
+}
+body{
+    margin-top: 22px;
+    background-color: lightgreen;
+}
