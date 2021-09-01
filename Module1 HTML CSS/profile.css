@@ -9,7 +9,7 @@ body{
 }
 
 .topbar{
-    background-color:darkred;
+    background-color:royalblue;
     overflow: hidden;
 }
 
@@ -23,7 +23,7 @@ body{
 }
 
 .sidebar{
-    background-color: lightcoral;
+    background-color: lightskyblue;
     text-align: left;
     color: white;
     height: 100%;
